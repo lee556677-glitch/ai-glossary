@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上下文視窗（Context Window）｜AI 白話小辭典</title>
+<meta name="description" content="AI 一次「看得到」的文字上限，超過了它就會忘記前面的內容。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="context-window">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=basic#terms">基礎概念</a> / 上下文視窗
+  </nav>
+
+  <header class="term-head">
+    <h1>上下文視窗</h1>
+    <p class="term-head__en">Context Window</p>
+    <p class="term-meta">
+      <span class="tag tag--yellow">基礎概念</span>
+      <span class="level"><span aria-hidden="true">★★☆</span><span class="sr-only">難度 2 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--yellow">
+      <p>AI 一次能「看到」的文字上限，<mark class="hl">你的問題、之前的對話、附上的檔案</mark>和它自己的回答都要算進去。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>就像考試時老師允許帶一張 A4 小抄。小抄的空間是固定的，寫進去的東西越多就越擠；寫不下的，考試時就看不到。</p>
+    <p>AI 的上下文視窗就是那張小抄。對話越聊越長，最早的內容可能被擠出去或被縮短，於是它好像「忘記」你一開始交代過的事。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>在一段很長的對話裡，可能會發生這種事：</p>
+    <div class="chat">
+      <p class="chat__user">（第 1 則訊息）接下來請都用英文回答我。</p>
+      <p class="chat__ai">Sure! I'll answer in English from now on.</p>
+      <p class="chat__user">（聊了很久之後……）那這一題要怎麼解？</p>
+      <p class="chat__ai">這一題可以分成三個步驟來看……</p>
+    </div>
+    <p>一開始的規定可能已經被擠出視窗，或被大量新內容稀釋了。解法是把重要規則再說一次，或寫進像 <a href="agents-md.html">AGENTS.md</a> 這種每次都會被讀進去的檔案。</p>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">AI 會永遠記得我們聊過的所有事。</p>
+        <p class="myths__right">模型只看得到「這次對話、而且視窗裝得下」的內容。有些產品另外做了「記憶」功能，是在外面額外存起來，再放回視窗裡給它看。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">上下文視窗越大，回答就一定越準。</p>
+        <p class="myths__right">塞進一大堆不相關的資料，重點反而容易被淹沒。給 AI 精準、相關的資料，比塞得滿滿的更有用。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">跟 AI 聊了很久之後，它突然忘記你一開始的規定，最可能的原因是？</p>
+      <ol class="quiz__options" type="A">
+        <li>AI 在生你的氣</li>
+        <li>早期的內容超出（或被擠出）了上下文視窗</li>
+        <li>網路斷線了</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：B</strong>。視窗大小有限，舊內容會被擠掉或稀釋；重要的規則可以再提醒一次。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="token.html">詞元</a></li>
+      <li><a class="chip" href="rag.html">檢索增強生成</a></li>
+      <li><a class="chip" href="agents-md.html">AGENTS.md / CLAUDE.md</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

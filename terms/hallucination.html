@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>幻覺（Hallucination）｜AI 白話小辭典</title>
+<meta name="description" content="AI 一本正經地講出錯誤、甚至根本不存在的內容。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="hallucination">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=usage#terms">使用技巧</a> / 幻覺
+  </nav>
+
+  <header class="term-head">
+    <h1>幻覺</h1>
+    <p class="term-head__en">Hallucination</p>
+    <p class="term-meta">
+      <span class="tag tag--pink">使用技巧</span>
+      <span class="level"><span aria-hidden="true">★★☆</span><span class="sr-only">難度 2 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--pink">
+      <p>AI <mark class="hl">一本正經地講出錯誤的內容</mark>，甚至編出根本不存在的書、論文或網址。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>想像考試遇到不會的題目，有位同學還是把整頁寫滿：字跡工整、語氣肯定，但內容是自己掰的。</p>
+    <p>LLM 的本能是「把話接得通順合理」，而不是「確認這是真的」。所以當它不知道答案時，可能會順著語氣編出一個看起來很像真的答案。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>寫報告時請 AI 推薦參考文獻，可能會遇到這種情況（以下為示意）：</p>
+    <div class="chat">
+      <p class="chat__user">請給我三篇關於「大學生使用社群媒體與睡眠品質」的論文。</p>
+      <p class="chat__ai">1. 王小明（2019）。〈社群媒體使用對大學生睡眠之影響〉。《○○教育研究》，12(3)，45–67。……</p>
+    </div>
+    <p>作者、期刊、頁碼都很像真的，但這篇論文可能根本不存在。報告裡的每一筆引用，都要自己到 Google Scholar 或圖書館系統查得到再使用。</p>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">只有比較差的 AI 才會產生幻覺。</p>
+        <p class="myths__right">目前所有大型語言模型都可能發生幻覺，只是頻率高低不同，再厲害的模型也要查證。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">只要叫它「不要亂講」，它就不會亂講。</p>
+        <p class="myths__right">有一點幫助，但不保證。更有效的做法是提供可靠資料（例如 <a href="rag.html">RAG</a>）、要求附上來源，最後自己查證。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">AI 給了你一筆看起來很專業的論文引用，你應該怎麼做？</p>
+      <ol class="quiz__options" type="A">
+        <li>直接複製進報告，反正看起來很專業</li>
+        <li>自己到 Google Scholar 或圖書館系統查詢，確認存在再使用</li>
+        <li>再問同一個 AI 一次「你確定嗎？」就好</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：B</strong>。AI 說「確定」不代表真的存在；真正可靠的是自己查到原始資料。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="llm.html">大型語言模型</a></li>
+      <li><a class="chip" href="rag.html">檢索增強生成</a></li>
+      <li><a class="chip" href="prompt.html">提示詞</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

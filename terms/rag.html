@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>檢索增強生成（Retrieval-Augmented Generation）｜AI 白話小辭典</title>
+<meta name="description" content="先找出相關資料再讓 AI 看著回答，像把閉書考變成開書考。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="rag">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=advanced#terms">進階應用</a> / 檢索增強生成
+  </nav>
+
+  <header class="term-head">
+    <h1>檢索增強生成</h1>
+    <p class="term-head__en">Retrieval-Augmented Generation（RAG）</p>
+    <p class="term-meta">
+      <span class="tag tag--blue">進階應用</span>
+      <span class="level"><span aria-hidden="true">★★★</span><span class="sr-only">難度 3 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--blue">
+      <p>先從資料裡<mark class="hl">找出相關內容</mark>，再交給 AI 看著回答——把「閉書考」變成「開書考」。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>閉書考時，你只能靠記憶作答，記錯了也不知道。開書考就不一樣：先翻課本找到相關的那幾頁，再看著課本寫答案。</p>
+    <p>RAG 就是讓 AI 從閉書考變成開書考。系統先去資料庫、文件或網站裡「檢索」相關段落，連同你的問題一起交給 AI，AI 再根據這些資料「生成」回答，還能附上出處。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>以學校的「校務問答機器人」為例：</p>
+    <ol class="steps">
+      <li>同學問：「停修的期限是哪一天？」</li>
+      <li>系統在校務公告裡搜尋和「停修」有關的段落。</li>
+      <li>找出最相關的 2～3 段公告。</li>
+      <li>把公告內容和問題一起交給 LLM。</li>
+      <li>LLM 根據公告回答，並附上公告連結當作來源。</li>
+    </ol>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">用了 RAG，AI 就不會出錯。</p>
+        <p class="myths__right">如果找到的資料本身是錯的、過時的，或根本找錯段落，答案一樣會錯。資料的品質決定回答的品質。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">RAG 是把資料「教」進模型裡。</p>
+        <p class="myths__right">模型本身完全沒有改變，只是每次回答前多給它一份參考資料。真正改變模型本身的做法叫做「微調（Fine-tuning）」。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">RAG 和「微調」最大的差別是什麼？</p>
+      <ol class="quiz__options" type="A">
+        <li>RAG 是回答時給參考資料，微調是重新訓練、改變模型本身</li>
+        <li>兩個完全一樣，只是名字不同</li>
+        <li>RAG 只能用在英文資料</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：A</strong>。RAG 像開書考，微調像重新補習，兩者也常常搭配使用。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="hallucination.html">幻覺</a></li>
+      <li><a class="chip" href="context-window.html">上下文視窗</a></li>
+      <li><a class="chip" href="ai-agent.html">AI 代理</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 代理（AI Agent）｜AI 白話小辭典</title>
+<meta name="description" content="會自己規劃步驟、使用工具，一步步把任務做完的 AI。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="ai-agent">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=advanced#terms">進階應用</a> / AI 代理
+  </nav>
+
+  <header class="term-head">
+    <h1>AI 代理</h1>
+    <p class="term-head__en">AI Agent</p>
+    <p class="term-meta">
+      <span class="tag tag--blue">進階應用</span>
+      <span class="level"><span aria-hidden="true">★★★</span><span class="sr-only">難度 3 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--blue">
+      <p>不只回答問題，還會<mark class="hl">自己規劃步驟、使用工具</mark>，一步步把任務做完的 AI。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>一般的聊天 AI 像打電話問路：它告訴你怎麼走，但路還是要你自己走。</p>
+    <p>AI Agent 比較像一位幫你跑腿的助理：你交代「幫我買到某本書」，他會自己查哪裡有賣、比價，下單前再跟你確認。遇到需要你本人處理的事（像是登入、付款），他會停下來問你。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>例如你對 Agent 說「幫我把這個網站上傳到 GitHub，並開啟網頁」，它可能會這樣做：</p>
+    <ol class="steps">
+      <li>規劃步驟：建立儲存庫 → 上傳檔案 → 開啟 GitHub Pages → 檢查網址。</li>
+      <li>打開瀏覽器，請你先自己登入 GitHub。</li>
+      <li>建立儲存庫並上傳檔案。</li>
+      <li>到設定頁開啟 GitHub Pages。</li>
+      <li>打開網址確認網頁正常，再回報結果給你。</li>
+    </ol>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">AI Agent 什麼都可以自己決定。</p>
+        <p class="myths__right">好的 Agent 遇到付款、刪除檔案、寄信這類重要或無法復原的動作，應該先停下來問人。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">Agent 是另一種更聰明的 AI 模型。</p>
+        <p class="myths__right">Agent 背後通常還是 LLM，差別在外面加上了「工具」（瀏覽器、程式、檔案）和「一直做到完成」的流程。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">AI Agent 和一般聊天 AI 最大的差別是什麼？</p>
+      <ol class="quiz__options" type="A">
+        <li>Agent 講話比較有禮貌</li>
+        <li>Agent 能使用工具、自己規劃多個步驟去完成任務</li>
+        <li>Agent 不會產生幻覺</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：B</strong>。會用工具、能多步驟行動，才是 Agent 的關鍵；它一樣可能出錯，所以重要步驟要讓人確認。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="llm.html">大型語言模型</a></li>
+      <li><a class="chip" href="agents-md.html">AGENTS.md / CLAUDE.md</a></li>
+      <li><a class="chip" href="rag.html">檢索增強生成</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

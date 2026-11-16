@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大型語言模型（Large Language Model）｜AI 白話小辭典</title>
+<meta name="description" content="讀過海量文字、專門「預測下一個字」的程式，ChatGPT 等聊天 AI 的大腦。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="llm">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=basic#terms">基礎概念</a> / 大型語言模型
+  </nav>
+
+  <header class="term-head">
+    <h1>大型語言模型</h1>
+    <p class="term-head__en">Large Language Model（LLM）</p>
+    <p class="term-meta">
+      <span class="tag tag--yellow">基礎概念</span>
+      <span class="level"><span aria-hidden="true">★☆☆</span><span class="sr-only">難度 1 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--yellow">
+      <p>一種讀過海量文字、專門<mark class="hl">預測下一個字</mark>的程式；把這件事做到極致，就能寫文章、回答問題、寫程式。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>想像一位超級厲害的「文字接龍」高手。你說「今天天氣真……」，他會根據自己讀過的無數句子，猜出最可能接的是「好」。</p>
+    <p>LLM 就是這樣一個字一個字接下去，接出一整段回答。它不是去資料庫裡「查」答案，而是根據讀過的內容「接」出最合理的下一段——所以它很會說話，但不代表每句話都是對的。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>請 AI 幫忙寫請假信時，它看起來像在思考，其實背後一直在做同一件事：預測下一個字。</p>
+    <div class="chat">
+      <p class="chat__user">幫我寫一封給教授的請假信，因為感冒發燒。</p>
+      <p class="chat__ai">教授您好，我是修習您「資訊管理概論」的學生，因為感冒發燒，下週一的課需要請假一次……</p>
+    </div>
+    <p>回答裡的每一個字，都是模型依照前面的內容，算出「最可能出現的下一個字」再接上去的。</p>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">LLM 回答問題時，會先上網查資料。</p>
+        <p class="myths__right">模型本身只靠訓練時學到的內容回答。有些產品能上網，是另外接上了搜尋工具，不是模型自己會。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">它講得那麼流暢，內容一定是對的。</p>
+        <p class="myths__right">「通順」和「正確」是兩回事。LLM 的目標是把話接得合理，有時會一本正經地講錯，這叫做<a href="hallucination.html">幻覺</a>。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">LLM 最核心在做的事情是什麼？</p>
+      <ol class="quiz__options" type="A">
+        <li>到資料庫裡查出正確答案</li>
+        <li>根據前面的內容，預測最可能的下一個字</li>
+        <li>把整個網路的內容背下來，原封不動地輸出</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：B</strong>。LLM 是「接龍高手」，一段回答是一個字一個字預測出來的。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="token.html">詞元</a></li>
+      <li><a class="chip" href="context-window.html">上下文視窗</a></li>
+      <li><a class="chip" href="hallucination.html">幻覺</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

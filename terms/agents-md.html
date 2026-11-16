@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGENTS.md / CLAUDE.md（Agent Instruction File）｜AI 白話小辭典</title>
+<meta name="description" content="放在專案裡、寫給 AI 看的說明書，告訴它專案規則與做事方式。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="../" data-slug="agents-md">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="../index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="../index.html#terms">名詞總覽</a>
+      <a href="../index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <nav class="breadcrumb" aria-label="麵包屑">
+    <a href="../index.html">首頁</a> / <a href="../index.html?cat=tools#terms">開發工具</a> / AGENTS.md / CLAUDE.md
+  </nav>
+
+  <header class="term-head">
+    <h1>AGENTS.md / CLAUDE.md</h1>
+    <p class="term-head__en">Agent Instruction File</p>
+    <p class="term-meta">
+      <span class="tag tag--green">開發工具</span>
+      <span class="level"><span aria-hidden="true">★★☆</span><span class="sr-only">難度 2 / 3</span></span>
+    </p>
+  </header>
+
+  <section class="block" id="oneliner">
+    <h2><span class="num">1</span>一句話說明</h2>
+    <div class="note note--green">
+      <p>放在專案資料夾裡、<mark class="hl">寫給 AI 看的說明書</mark>：這個專案在做什麼、檔案怎麼放、要遵守哪些規則。</p>
+    </div>
+  </section>
+
+  <section class="block" id="analogy">
+    <h2><span class="num">2</span>生活比喻</h2>
+    <p>就像打工第一天拿到的「交接手冊」。新同事不用每件事都問「東西放哪？格式長怎樣？」，翻手冊就知道。</p>
+    <p>AI 每次進到專案時，都會先讀這本手冊，就不用你每次重新交代一遍。<code>AGENTS.md</code> 是許多 AI 寫程式工具共同支援的檔名；Claude Code 讀的是 <code>CLAUDE.md</code>，所以常見做法是讓 CLAUDE.md 直接引用 AGENTS.md，兩邊共用同一份規則。</p>
+  </section>
+
+  <section class="block" id="example">
+    <h2><span class="num">3</span>實際例子</h2>
+    <p>這個網站本身就是例子！本站的 AGENTS.md 規定每個名詞頁都要有 6 個區塊、檔名用英文小寫、要登記到 <code>data/terms.js</code>。看看規則寫得好不好，差在哪裡：</p>
+    <div class="compare">
+      <div class="compare__bad">
+        <h3>模糊的規則</h3>
+        <p>「頁面要好看一點。」「檔名取清楚一點。」</p>
+        <p>AI 每次理解的「好看」「清楚」都不一樣，做出來的頁面就會各長各的。</p>
+      </div>
+      <div class="compare__good">
+        <h3>具體的規則</h3>
+        <p>「每個名詞頁依序包含 6 個區塊：一句話說明、生活比喻、實際例子、常見誤會、小測驗、相關名詞。」「檔名用英文小寫加連字號，例如 <code>context-window.html</code>。」</p>
+        <p>規則具體到可以檢查，AI 每次做出來的頁面就會一模一樣。</p>
+      </div>
+    </div>
+    <p>所以只要說一句「請依照 AGENTS.md，新增名詞：微調」，AI 就能做出格式和其他頁一致的新頁面。</p>
+  </section>
+
+  <section class="block" id="myths">
+    <h2><span class="num">4</span>常見誤會</h2>
+    <ul class="myths">
+      <li>
+        <p class="myths__wrong">AGENTS.md 寫得越長越好。</p>
+        <p class="myths__right">太長反而抓不到重點。重要的是具體、可以執行、可以檢查的規則，例如「檔名用小寫英文加連字號」就比「檔名要清楚」有用。</p>
+      </li>
+      <li>
+        <p class="myths__wrong">寫了 AGENTS.md，AI 就一定會照做。</p>
+        <p class="myths__right">AI 會盡量遵守，但還是可能漏掉。所以本站在 AGENTS.md 裡附了「完成前自我檢查清單」，讓 AI 和人都能逐項確認。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" id="quiz">
+    <h2><span class="num">5</span>小測驗</h2>
+    <div class="quiz">
+      <p class="quiz__q">下面哪一條規則最適合寫進 AGENTS.md？</p>
+      <ol class="quiz__options" type="A">
+        <li>「頁面要漂亮一點。」</li>
+        <li>「每個名詞頁必須依序包含 6 個區塊，且區塊的 id 不能更改。」</li>
+        <li>「請盡量做好。」</li>
+      </ol>
+      <details>
+        <summary>看答案</summary>
+        <div class="quiz__answer">
+          <p><strong>答案：B</strong>。具體、可以檢查的規則，AI 才能每次都做出一樣的結果。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block" id="related">
+    <h2><span class="num">6</span>相關名詞</h2>
+    <ul class="chips">
+      <li><a class="chip" href="prompt.html">提示詞</a></li>
+      <li><a class="chip" href="ai-agent.html">AI 代理</a></li>
+      <li><a class="chip" href="context-window.html">上下文視窗</a></li>
+    </ul>
+  </section>
+
+  <nav class="term-nav" id="term-nav" aria-label="上一篇與下一篇"></nav>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="../data/terms.js"></script>
+<script src="../assets/main.js"></script>
+</body>
+</html>

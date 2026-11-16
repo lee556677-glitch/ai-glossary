@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 白話小辭典｜用生活比喻看懂 AI 名詞</title>
+<meta name="description" content="用一句話和一個生活比喻，看懂 LLM、Token、Prompt、RAG、AI Agent 等常見 AI 名詞。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-root="./">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="index.html">
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="paper" x="8" y="4" width="28" height="32" rx="3" stroke-width="2.5"/><path class="ring" d="M4 11h8M4 20h8M4 29h8" stroke-width="3" stroke-linecap="round"/><text class="txt" x="22" y="25" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">AI</text></svg>
+      <span>AI 白話小辭典</span>
+    </a>
+    <nav class="site-nav" aria-label="主選單">
+      <a href="index.html#terms">名詞總覽</a>
+      <a href="index.html#about">關於本站</a>
+      <a href="https://github.com/lee556677-glitch/ai-glossary">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <p class="hero__eyebrow">AI PLAIN-TALK GLOSSARY</p>
+    <h1>AI <mark class="hl">白話</mark>小辭典</h1>
+    <p class="hero__lead">上課、看新聞常聽到 LLM、Token、RAG……卻說不出它到底是什麼？這裡的每個名詞都用<strong>一句話</strong>和<strong>一個生活比喻</strong>講清楚，看完就能講給朋友聽。</p>
+    <p class="hero__stats">
+      <span class="stamp">收錄 <b id="term-count">8</b> 個名詞</span>
+      <span class="stamp stamp--blue">最後更新 <span id="term-updated">2026-11-16</span></span>
+    </p>
+  </section>
+
+  <section id="terms" aria-labelledby="terms-title">
+    <h2 id="terms-title" class="section-title"><mark class="hl">名詞總覽</mark></h2>
+    <div class="toolbar">
+      <label class="search">
+        <span class="sr-only">搜尋名詞</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="term-search" type="search" placeholder="搜尋：例如 token、幻覺、RAG" autocomplete="off">
+      </label>
+      <div class="chips" id="category-chips" role="group" aria-label="依分類篩選"></div>
+    </div>
+    <div class="card-grid" id="term-grid" aria-live="polite"></div>
+    <p class="empty" id="term-empty" hidden>找不到這個名詞……也許它還在待收錄清單裡！</p>
+    <noscript><p class="empty">請開啟 JavaScript 以顯示名詞卡片。</p></noscript>
+  </section>
+
+  <section id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title"><mark class="hl">每一頁怎麼讀？</mark></h2>
+    <p>每個名詞頁的格式都一模一樣，照順序讀就好：</p>
+    <ol class="steps">
+      <li><strong>一句話說明</strong>：先抓住最核心的意思。</li>
+      <li><strong>生活比喻</strong>：用熟悉的情境理解它。</li>
+      <li><strong>實際例子</strong>：看它在真實情境裡長什麼樣子。</li>
+      <li><strong>常見誤會</strong>：避開最容易搞錯的地方。</li>
+      <li><strong>小測驗</strong>：用一題確認自己真的懂了。</li>
+      <li><strong>相關名詞</strong>：順著連結繼續讀下去。</li>
+    </ol>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title"><mark class="hl">這本辭典怎麼長大？</mark></h2>
+    <div class="note note--green">
+      <p>這個網站是和 AI 一起做的。重點不是「做出一個網頁」，而是先寫好一份給 AI 看的規則手冊 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md"><code>AGENTS.md</code></a>：每頁一定要有哪 6 個區塊、檔名怎麼取、顏色和字體用什麼、文字要用什麼口吻、做完要檢查什麼。</p>
+      <p>有了這份手冊，之後只要對 AI 說一句：</p>
+      <p class="prompt-line">請依照 AGENTS.md，新增名詞：微調（Fine-tuning）</p>
+      <p>AI 就會照著同一套流程，做出和其他頁格式一模一樣的新頁面：</p>
+      <ol class="steps">
+        <li>讀 <code>AGENTS.md</code>，確認這個名詞還沒收錄。</li>
+        <li>複製 <code>templates/term.html</code> 成為 <code>terms/fine-tuning.html</code>。</li>
+        <li>依規定寫滿 6 個區塊，並使用指定的元件與配色。</li>
+        <li>在 <code>data/terms.js</code> 登記一筆，首頁卡片和上一篇／下一篇就會自動更新。</li>
+        <li>跑一次「完成前自我檢查清單」。</li>
+      </ol>
+    </div>
+    <p>想更了解這種做法？可以讀讀 <a href="terms/agents-md.html">AGENTS.md / CLAUDE.md</a> 這一頁。</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>AI 白話小辭典 · 依照 <a href="https://github.com/lee556677-glitch/ai-glossary/blob/main/AGENTS.md">AGENTS.md</a> 與 AI 協作製作</span>
+    <span>最後更新：2026-11-16</span>
+  </div>
+</footer>
+
+<script src="data/terms.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
